@@ -1,34 +1,6 @@
 // 客製化Bootstrap scss檔案
-@import "bootstrap/scss/functions";
-$primary: #fb5830;
-$secondary: #003865;
-@import "bootstrap/scss/variables";
-    $custom-colors:(
-      "custom-orange":#EF5B0C,
-      "custom-dark-blue":#003865,
-      "custom-light-green":#D4F6CC,
-      "custom-green":#3CCF4E
-    );
-    $theme-colors:map-merge($theme-colors,$custom-colors );
-   
-    $custom-fontSizes:(
-      7: $font-size-base * 0.8,
-      8: $font-size-base * 0.7
-      );
-    $font-sizes: map-merge($font-sizes,$custom-fontSizes);
-    @import "bootstrap/scss/utilities";
-    @import "bootstrap/scss/mixins";
-    @import "bootstrap/scss/root";
-    @import "bootstrap/scss/nav";
-    @import "bootstrap/scss/navbar";
-    @import "bootstrap/scss/containers";
-    @import "bootstrap/scss/carousel";
-    @import "bootstrap/scss/utilities/api";
 
-   
-
-
-// @import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";
 
 
 
