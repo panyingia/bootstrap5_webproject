@@ -1,6 +1,83 @@
 // 客製化Bootstrap scss檔案
 
-@import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/functions";
+$primary: #fb5830;
+$secondary: #d0021c;
+$input-font-size: 0.8rem;
+@import "bootstrap/scss/variables";
+$font-sizes: map-merge(
+  $font-sizes,
+  (
+    7: $font-size-base * 0.8,
+    8: $font-size-base * 0.7,
+  )
+);
+
+$utilities-text-colors: map-merge(
+  $utilities-text-colors,
+  (
+    "gray-700": $gray-700,
+  )
+);
+
+$utilities-bg-colors: map-merge(
+  $utilities-bg-colors,
+  (
+    "line": #f97160,
+    "gray-200": $gray-200,
+  )
+);
+
+@import "bootstrap/scss/mixins";
+
+
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/containers";
+
+
+@import "bootstrap/scss/utilities";
+$utilities: map-merge(
+  $utilities,
+  (
+    "width":
+      map-merge(
+        map-get($utilities, "width"),
+        (
+          responsive: true,
+          values:
+            map-merge(
+              map-get(map-get($utilities, "width"), "values"),
+              (
+                "50px": 50px,
+                "2px": 2px,
+              )
+            ),
+        )
+      ),
+    "height":
+      map-merge(
+        map-get($utilities, "height"),
+        (
+          responsive: true,
+          values:
+            map-merge(
+              map-get(map-get($utilities, "height"), "values"),
+              (
+                "80px": 80px,
+              )
+            ),
+        )
+      ),
+  )
+);
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/card";
+@import "bootstrap/scss/utilities/api";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/carousel";
+
+
 
 
 
